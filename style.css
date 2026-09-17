@@ -1,0 +1,307 @@
+/**** Importation des polices ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/**** Reset ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-family: "Cinzel", serif;
+    line-height: 1.5;
+}
+
+/**** body ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/**** header ****/
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #38bdf8;
+    margin: 0 0 10px 0;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+/****  main ****/
+#main-content {
+    flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/**** Section timeline ****/
+
+.timeline-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/**** Flèches de navigation de la frise ****/
+
+.nav-arrow {
+    background-color: #1e293b;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    /* Empêche la flèche de s'écraser */
+}
+
+.nav-arrow:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+/**** Zone avec barre de défilement horizontal ****/
+
+.timeline-wrapper {
+    flex: 1;
+    overflow-x: auto;
+    padding: 40px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #38bdf8 #1e293b;
+}
+
+/**** Défilement fluide pour les navigateurs basés sur Webkit ****/
+
+.timeline-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-track {
+    background-color: #1e293b;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb {
+    background-color: #38bdf8;
+    border-radius: 10px;
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    min-width: max-content;
+    /* Force la frise à dépasser horizontalement */
+    height: 120px;
+}
+
+/**** Ligne horizontale continue colorée ****/
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-45%);
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #38bdf8, #6366f1);
+    z-index: 1;
+}
+
+/**** Conteneur des dates ****/
+.timeline-events {
+    display: flex;
+    gap: 120px;
+    position: relative;
+    z-index: 2;
+}
+
+/**** Style des ronds/boutons de dates ****/
+
+.event-dot {
+    background-color: #1e293b;
+    border: 3px solid #38bdf8;
+    color: #fffffe;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    will-change: transform;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.event-dot:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4);
+}
+
+/**** Bouton sélectionné actif ****/
+
+.event-dot.active {
+    background-color: #f43f5e;
+    border-color: #fda4af;
+    color: #fffffe;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(244, 63, 94, 0.4);
+}
+
+/**** section details-container ****/
+
+.details-container {
+    width: 90%;
+    max-width: 700px;
+    min-height: 220px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.event-card {
+    background-color: #1e293b;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #f43f5e;
+    animation: slideUp 0.4s ease-out forwards;
+}
+
+/**** Animation slideUp  ****/
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.badge-date {
+    display: inline-block;
+    background-color: #334155;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.event-card h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.8rem;
+    color: #fffffe;
+}
+
+.event-card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/***** footer ****/
+
+footer {
+    width: 100%;
+    background-color: #1e293b;
+    padding: 20px 0;
+    border-top: 1px solid #334155;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #f43f5e;
+}
+
+/**** Responsive design version mobile ****/
+
+@media screen and (max-width: 768px) {
+    .timeline-section {
+        gap: 5px;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .event-card {
+        padding: 20px;
+    }
+
+    .event-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
