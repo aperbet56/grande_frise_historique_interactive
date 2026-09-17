@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grande Frise Historique Interactive</title>
+    <!-- Lien vers les icônes FontAwesome pour les flèches de navigation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <!-- Importation des fichiers CSS -->
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Début du header -->
+    <header role="banner">
+      <div class="header-content">
+        <h1>Grande Frise Historique</h1>
+        <p>Explorez les grandes périodes de notre histoire</p>
+      </div>
+    </header>
+    <!-- Fin du header -->
+
+    <!-- Début du main  -->
+    <main id="main-content">
+      <!-- Début de la Section de la frise chronologique -->
+      <section class="timeline-section" aria-label="Frise chronologique">
+        <!-- Début du bouton pour faire défiler vers la gauche -->
+        <button
+          class="nav-arrow left"
+          id="arrow-left"
+          aria-label="Événement précédent"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <!-- Fin du bouton pour faire défiler vers la gauche -->
+
+        <!-- Début du Conteneur avec barre de défilement -->
+        <div class="timeline-wrapper" id="timeline-wrapper">
+          <div class="timeline-container">
+            <!-- Ligne de fond graphique -->
+            <div class="timeline-line" aria-hidden="true"></div>
+            <nav
+              class="timeline-events"
+              id="timeline-events"
+              aria-label="Dates clés"
+            ></nav>
+          </div>
+        </div>
+        <!-- Fin du Conteneur avec barre de défilement -->
+
+        <!-- Début du bouton pour faire défiler vers la droite -->
+        <button
+          class="nav-arrow right"
+          id="arrow-right"
+          aria-label="Événement suivant"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <!-- Fin du bouton -->
+      </section>
+      <!-- Fin de la Section de la frise chronologique -->
+
+      <!-- Début de la Section d'affichage des explications de l'événement cliqué -->
+      <section class="details-container" aria-live="polite">
+        <article id="event-card" class="event-card">
+          <span id="event-date" class="badge-date"></span>
+          <h2 id="event-title"></h2>
+          <p id="event-description"></p>
+        </article>
+      </section>
+      <!-- Fin de la Section d'affichage des explications de l'événement cliqué -->
+    </main>
+    <!-- Fin du main-->
+
+    <!-- Début du footer -->
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <p>&copy; 2026 - Frise Historique Interactive. Tous droits réservés.</p>
+        <div class="footer-links">
+          <a href="#main-content"
+            ><i class="fas fa-arrow-up"></i> Retour en haut</a
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- Fin du footer -->
+
+    <!-- Importation du fichier JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
