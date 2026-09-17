@@ -294,3 +294,60 @@ footer {
         font-size: 1.4rem;
     }
 }
+
+/**** Responsive design ****/
+
+@media screen and (max-width: 572px) {
+
+    header,
+    #main-content {
+        padding: 15px 10px 0 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p,
+    .event-dot {
+        font-size: 0.85rem;
+    }
+
+    .timeline-section {
+        gap: 5px;
+    }
+
+    .nav-arrow {
+        display: none;
+    }
+
+    .timeline-container {
+        padding: 0 15px;
+    }
+
+    .timeline-events {
+        gap: 40px;
+    }
+
+    .event-dot {
+        padding: 8px 14px;
+    }
+
+    .event-card {
+        padding: 20px 15px;
+    }
+
+    .event-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .event-card p {
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
