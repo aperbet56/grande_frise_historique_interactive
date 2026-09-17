@@ -279,29 +279,18 @@ footer {
     color: #f43f5e;
 }
 
-/**** Responsive design version mobile ****/
+/**** Responsive design ****/
 
 @media screen and (max-width: 768px) {
-    .timeline-section {
-        gap: 5px;
-    }
-
-    .nav-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
+    header h1 {
+        font-size: 1.8rem;
     }
 
     .event-card {
-        padding: 20px;
+        padding: 25px;
     }
 
     .event-card h2 {
         font-size: 1.4rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
     }
 }
