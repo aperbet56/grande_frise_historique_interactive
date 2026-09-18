@@ -33,3 +33,14 @@ Lien vers le projet :
 - JavaScript
 - Code JavaScript commenté
 - Manipulation dynamique du DOM et fonctions fléchées
+
+## 📂 Structure du projet
+
+Le projet se compose de trois fichiers principaux regroupés dans le même répertoire :
+
+```text
+├── index.html       # Structure HTML5 et contenu sémantique
+├── style.css        # Design complet, animations
+├── script.js        # Base de données historique et logique JavaScript
+└── README.md        # Documentation du projet (ce fichier)
+```
