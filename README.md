@@ -8,14 +8,14 @@ Ce projet a été développé en **HTML5**, **CSS3** et **JavaScript moderne (ES
 
 Cette application dispose de plusieurs fonctionnalités :
 
-- **Navigation fluide:** Défilement horizontal fluide et support du balayage tactile (_swipe_) intuitif sur les smartphones
+- **Navigation fluide:** Défilement horizontal fluide et support du balayage tactile (_swipe_) intuitif sur les smartphones.
 - **Riche en contenu :** Près de 30 dates clés documentées et illustrées par des repères visuels.
 - **100% Mobile Friendly** : Design moderne et adaptatif (_Responsive Design_) conçu pour offrir une excellente expérience sur smartphones, tablettes et ordinateurs.
 - **Accessibilité (A11Y) :** Utilisation de balises HTML sémantiques ( `<header>`, `<main>`, `<nav>`, `<section>`, `<article>`, `<footer>`) et d'attributs `aria-label` et `aria-live`
 
 ## 📸 Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/grande_frise_historique_interactive/
 
 ## 🛠️ Projet développé avec
 
