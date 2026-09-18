@@ -44,3 +44,22 @@ Le projet se compose de trois fichiers principaux regroupés dans le même répe
 ├── script.js        # Base de données historique et logique JavaScript
 └── README.md        # Documentation du projet (ce fichier)
 ```
+
+## ⚙️ Comment ajouter vos propres dates ?
+
+La frise est entièrement **dynamique**. Pour ajouter, modifier ou supprimer un événement de l'histoire, il vous suffit d'ouvrir le fichier `script.js` et d'éditer le tableau `historyData`.
+
+Chaque événement doit respecter la structure suivante :
+
+```javascript
+{
+    date: "Votre Date",
+    title: "Le Titre de l'Événement",
+    icon: "fa-nom-de-licone", // Utilisez le nom d'une icône gratuite sur fontawesome.com
+    description: "Votre description textuelle détaillée ici."
+}
+```
+
+L'application s'occupe seule de générer les boutons, de lier les animations et d'adapter le défilement !
+
+---
