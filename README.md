@@ -16,3 +16,20 @@ Cette application dispose de plusieurs fonctionnalités :
 ## 📸 Démonstration
 
 Lien vers le projet :
+
+## 🛠️ Projet développé avec
+
+- Utilisation des balises sémantiques HTML5
+- CSS3
+- Flexbox
+- Animations css (transition, @keyframes)
+- Page web responsive
+- Desktop first
+- Commentaires HTML
+- Commentaires CSS
+- Importation d'un normaliseur : le fichier normalize
+- Importation des polices "Cinzel" et "Inter"
+- **FontAwesome (CDN) :** Intégration de la bibliothèque d'icônes vectorielles pour illustrer chaque période historique.
+- JavaScript
+- Code JavaScript commenté
+- Manipulation dynamique du DOM et fonctions fléchées
