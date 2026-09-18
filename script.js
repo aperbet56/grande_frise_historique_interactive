@@ -151,5 +151,55 @@ const displayEvent = (index) => {
   card.style.animation = "slideUp 0.4s ease-out forwards";
 };
 
+/**
+ * Déclarartion de la fonction generateTimeline qui va permettre de générer automatiquement les boutons de dates de la frise au démarrage
+ */
+const generateTimeline = () => {
+  // Por chaque élément du tableau historyData
+  historyData.forEach((item, index) => {
+    // Création de l'élément bouton pour la frise
+    const button = document.createElement("button");
+    button.classList.add("event-dot");
+
+    // Configuration du texte et des attributs d'accessibilité
+    button.textContent = item.date;
+    button.setAttribute("data-index", index);
+    button.setAttribute("aria-label", `Voir l'événement : ${item.title}`);
+
+    // Activation par défaut du tout premier événement (index 0)
+    if (index === 0) {
+      button.classList.add("active");
+    }
+
+    // Écoute de l'événement "click" sur le bouton créé
+    button.addEventListener("click", () => {
+      // Désactiver le bouton qui était actif avant le clic
+      const currentActive = document.querySelector(".event-dot.active");
+      if (currentActive) {
+        currentActive.classList.remove("active");
+      }
+
+      // Activer le bouton qui vient d'être cliqué
+      button.classList.add("active");
+
+      // Appel de la fonction displayEvent
+      displayEvent(index);
+
+      // Faire glisser la frise pour centrer proprement le bouton cliqué à l'écran
+      button.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    });
+
+    // Ajout du bouton dans le DOM
+    eventsContainer.appendChild(button);
+  });
+};
+
+// Appel de la fonction generateTimeline()
+generateTimeline();
+
 // Appel de la fonction displayEvent(0) pour afficher le tout premier événement
 displayEvent(0);
