@@ -127,3 +127,29 @@ const historyData = [
       "L'Italie réunit les plus grands athlètes de sports d'hiver lors des Jeux de Milan et Cortina d'Ampezzo, marquant le retour de grandes compétitions de sports d'hiver axées sur l'éco-responsabilité.",
   },
 ];
+
+// Récupération des événements HTML5
+const eventsContainer = document.querySelector("#timeline-events");
+const wrapper = document.querySelector("#timeline-wrapper");
+const card = document.querySelector("#event-card");
+const dateElement = document.querySelector("#event-date");
+const titleElement = document.querySelector("#event-title");
+const descriptionElement = document.querySelector("#event-description");
+
+/**
+ * Déclaration de la fonction displayEvent qui va permettre de mettre à jour le texte de la carte d'affichage avec les données de l'événement sélectionné
+ */
+const displayEvent = (index) => {
+  const data = historyData[index];
+
+  dateElement.textContent = data.date;
+  titleElement.textContent = data.title;
+  descriptionElement.textContent = data.description;
+
+  card.style.animation = "none";
+  card.offsetHeight; // Forcer le rafraîchissement
+  card.style.animation = "slideUp 0.4s ease-out forwards";
+};
+
+// Appel de la fonction displayEvent(0) pour afficher le tout premier événement
+displayEvent(0);
