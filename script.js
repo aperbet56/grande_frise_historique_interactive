@@ -135,6 +135,7 @@ const card = document.querySelector("#event-card");
 const dateElement = document.querySelector("#event-date");
 const titleElement = document.querySelector("#event-title");
 const descriptionElement = document.querySelector("#event-description");
+const copyrightYear = document.querySelector(".year");
 
 /**
  * Déclaration de la fonction displayEvent qui va permettre de mettre à jour le texte de la carte d'affichage avec les données de l'événement sélectionné
@@ -203,3 +204,15 @@ generateTimeline();
 
 // Appel de la fonction displayEvent(0) pour afficher le tout premier événement
 displayEvent(0);
+
+/**
+ * Déclartion de la fonction getCurrentYear qui va permettre d'afficher l'année en cours dans le footer
+ */
+const getCurrentYear = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  copyrightYear.textContent = `${year}`;
+};
+
+// Appel de la fonction getCurrentYear()
+getCurrentYear();
