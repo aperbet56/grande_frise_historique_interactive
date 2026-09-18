@@ -63,3 +63,7 @@ Chaque événement doit respecter la structure suivante :
 L'application s'occupe seule de générer les boutons, de lier les animations et d'adapter le défilement !
 
 ---
+
+## 📝 Licence
+
+Projet libre de droits. Vous pouvez l'utiliser, le modifier et le distribuer selon vos besoins professionnels ou éducatifs.
