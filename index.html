@@ -29,16 +29,6 @@
     <main id="main-content">
       <!-- Début de la Section de la frise chronologique -->
       <section class="timeline-section" aria-label="Frise chronologique">
-        <!-- Début du bouton pour faire défiler vers la gauche -->
-        <button
-          class="nav-arrow left"
-          id="arrow-left"
-          aria-label="Événement précédent"
-        >
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <!-- Fin du bouton pour faire défiler vers la gauche -->
-
         <!-- Début du Conteneur avec barre de défilement -->
         <div class="timeline-wrapper" id="timeline-wrapper">
           <div class="timeline-container">
@@ -52,16 +42,6 @@
           </div>
         </div>
         <!-- Fin du Conteneur avec barre de défilement -->
-
-        <!-- Début du bouton pour faire défiler vers la droite -->
-        <button
-          class="nav-arrow right"
-          id="arrow-right"
-          aria-label="Événement suivant"
-        >
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <!-- Fin du bouton -->
       </section>
       <!-- Fin de la Section de la frise chronologique -->
 
@@ -80,7 +60,10 @@
     <!-- Début du footer -->
     <footer role="contentinfo">
       <div class="footer-content">
-        <p>&copy; 2026 - Frise Historique Interactive. Tous droits réservés.</p>
+        <p>
+          &copy; <span class="year"></span> - Frise Historique Interactive. Tous
+          droits réservés.
+        </p>
         <div class="footer-links">
           <a href="#main-content"
             ><i class="fas fa-arrow-up"></i> Retour en haut</a
