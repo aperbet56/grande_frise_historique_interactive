@@ -1,10 +1,12 @@
 ## ⏳ GRANDE FRISE HISTORIQUE INTERACTIVE
 
+![Design preview for the project](./img/preview.png)
+
 ## 🚀 Le challenge
 
 Création d'une application web moderne, interactive et entièrement adaptative (**responsive**) permettant d'explorer les grands tournants de l'Histoire humaine, de l'invention de l'écriture en 3500 av. J.-C. jusqu'aux événements de 2026.
 
-Ce projet a été développé en **HTML5**, **CSS3** et **JavaScript moderne (ES6+ )**.
+Ce projet a été développé en **HTML5**, **CSS3** et **JavaScript moderne (ES6+)**.
 
 Cette application dispose de plusieurs fonctionnalités :
 
